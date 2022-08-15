@@ -1,35 +1,31 @@
-import React from 'react';
-import { createContext } from 'react';
-import { useReducer } from 'react';
+import React from "react";
+import { createContext } from "react";
+import { useReducer, useState } from "react";
 
-export const Context = createContext(null)
+export const Context = createContext(null);
 
-const initialState = {
-    id: 0,
-    title: '',
-}
-
-const reducer = (state , {type,payload}) => {
-    switch (type) {
-        case 'ADD-TODO':
-            return [...state , addTodo(payload.title)]
-       
-    }
-}
+const reducer = (state, { type, payload }) => {
+  switch (type) {
+    case "ADD-TODO":
+      return [...state, addTodo(payload.title)];
+  }
+};
 
 const addTodo = (name) => {
-    return {id: Date.now() , title: name}
-}
+  return { id: Date.now(), title: name };
+};
 
-const Provider = ({children}) => {
- const [state, dispatch] = useReducer(reducer, initialState)
+const Provider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, []);
+  const [title, setTitle] = useState("");
 
-    return(
-      <Context.Provider>
-        {children}
-      </Context.Provider>
-    )
-}
-
+  const data = {
+    state,
+    dispatch,
+    title,
+    setTitle,
+  };
+  return <Context.Provider value={data}>{children}</Context.Provider>;
+};
 
 export default Provider;
