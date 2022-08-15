@@ -16,7 +16,7 @@ const TodoList = () => {
             setTitle(e.target.value);
           }}
         />
-        <button type="submit" onClick={() => title.length > 3 ? addTitle : false}>
+        <button type="submit" onClick={() => title.length > 3 ? addTitle() : false}>
           add
         </button>
       </div>
