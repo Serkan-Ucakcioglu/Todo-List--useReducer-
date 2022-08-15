@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Context } from "../Context";
 
 const TodoList = () => {
-  const { title, setTitle, state, dispatch } = useContext(Context);
+  const { title, setTitle, state, addTitle } = useContext(Context);
 
   return (
     <div>
@@ -16,13 +16,7 @@ const TodoList = () => {
             setTitle(e.target.value);
           }}
         />
-        <button
-          type="submit"
-          onClick={() => {
-            dispatch({ type: "ADD-TODO", payload: { title: title } });
-            setText("");
-          }}
-        >
+        <button type="submit" onClick={addTitle}>
           add
         </button>
       </div>

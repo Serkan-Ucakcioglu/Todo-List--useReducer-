@@ -12,7 +12,14 @@ const TodoList = () => {
           <span>{todo.title}</span>
           <button className="edit">edit</button>
           <div>
-            <button className="delete">delete</button>
+            <button
+              className="delete"
+              onClick={() =>
+                dispatch({ type: "DELETE-TODO", payload: { id: todo.id } })
+              }
+            >
+              delete
+            </button>
           </div>
         </li>
       ))}
