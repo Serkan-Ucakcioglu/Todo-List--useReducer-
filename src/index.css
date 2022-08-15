@@ -17,6 +17,10 @@ header{
   align-items: center;
   margin-bottom: 15px;
 }
+
+ul,li{
+  list-style: none;
+}
 .container{
   width: 90%;
   max-width: 1200px;
@@ -34,5 +38,32 @@ header{
   margin-right: 5px;
 }
 .form button{
+  cursor: pointer;
+}
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+  padding: 0 ;
+}
+ .todo{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+  height: 40px;
+  border: 1px solid gray;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+.delete{
+  background: red;
+  color: white;
+  border: 1px solid red;
+  padding: 3px;
+  border-radius: 3px;
   cursor: pointer;
 }
