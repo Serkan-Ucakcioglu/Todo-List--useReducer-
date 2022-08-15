@@ -26,8 +26,6 @@ const Provider = ({ children }) => {
     setTitle("");
   };
 
-
-
   const data = {
     state,
     dispatch,
