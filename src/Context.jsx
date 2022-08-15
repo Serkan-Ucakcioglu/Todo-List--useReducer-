@@ -13,4 +13,4 @@ const Provider = ({children}) => {
 }
 
 
-export default Context;
+export default Provider;
