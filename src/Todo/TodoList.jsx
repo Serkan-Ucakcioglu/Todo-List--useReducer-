@@ -10,9 +10,6 @@ const TodoList = () => {
           <button className="delete">delete</button>
         </div>
       </li>
-      <li className="todo">todo list</li>
-      <li className="todo">todo list</li>
-      <li className="todo">todo list</li>
     </ul>
   );
 };
