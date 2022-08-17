@@ -38,6 +38,7 @@ const Provider = ({ children }) => {
   });
 
   const [title, setTitle] = useState("");
+  
   useEffect(() => {
     localStorage.setItem("state", JSON.stringify(state));
   }, [state]);
