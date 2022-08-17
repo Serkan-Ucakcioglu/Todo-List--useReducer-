@@ -15,6 +15,11 @@ const TodoList = () => {
           onChange={(e) => {
             setTitle(e.target.value);
           }}
+          onKeyPress={(e ) => {
+            if (e.key === "Enter") {
+              addTitle()
+            }
+          }}
         />
         <button
           type="submit"
