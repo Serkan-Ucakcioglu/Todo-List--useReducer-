@@ -37,6 +37,9 @@ const Provider = ({ children }) => {
     if (savedTodos) {
       return JSON.parse(savedTodos);
     }
+    else{
+      return []
+    }
   });
 
   const [title, setTitle] = useState("");
