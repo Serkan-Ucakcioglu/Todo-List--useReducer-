@@ -11,7 +11,7 @@ const reducer = (state, { type, payload }) => {
     case "DELETE-TODO":
       return state.filter((todo) => todo.id !== payload.id);
 
-    case "edit-todo":
+    case "EDİT-TODO":
       return state.map((t) => {
         if (t.id === payload.id) {
           console.log("newTodo", payload.title);

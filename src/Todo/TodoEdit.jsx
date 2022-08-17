@@ -10,13 +10,13 @@ export default function TodoEdit({ todo }) {
   let todoContent;
   const edit = (todo) => {
     dispatch({
-      type: "edit-todo",
+      type: "EDİT-TODO",
       payload: {
         id: todo.id,
         title: titles,
       },
-    })
-  }
+    });
+  };
 
   if (isEditing) {
     todoContent = (
@@ -32,8 +32,8 @@ export default function TodoEdit({ todo }) {
         <button
           className="edit"
           onClick={() => {
-            edit(todo)
-              setIsEditing(!isEditing);
+            edit(todo);
+            setIsEditing(!isEditing);
           }}
         >
           save
