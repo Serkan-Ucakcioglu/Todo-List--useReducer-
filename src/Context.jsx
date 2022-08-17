@@ -21,6 +21,9 @@ const reducer = (state, { type, payload }) => {
           return t;
         }
       });
+      default:
+        return state;
+     
   }
 };
 
