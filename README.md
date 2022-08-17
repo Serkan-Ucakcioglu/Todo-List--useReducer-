@@ -1,5 +1,6 @@
+### useContext To Do List project with useReducer
 
 ### WEB 
-![image](https://user-images.githubusercontent.com/98692987/185099873-9cfe2e72-57c9-4d24-a568-001b1d5ec6fb.png)
+![image](https://user-images.githubusercontent.com/98692987/185102071-df0a754a-4ba4-456c-937a-a1ffc6e4ff2d.png)
 ### RESPONSİVE
-![image](https://user-images.githubusercontent.com/98692987/185099947-f4289a9b-55bc-4a32-9caf-28540e0122c8.png)
+![image](https://user-images.githubusercontent.com/98692987/185102000-61f45f33-a994-4027-beab-6feea951e922.png)
