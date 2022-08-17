@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { useContext } from "react";
 import { Context } from "../Context";
 
 const TodoList = () => {
-  const { title, setTitle, state, addTitle } = useContext(Context);
+  const { title, setTitle, addTitle } = useContext(Context);
 
   return (
     <div>
