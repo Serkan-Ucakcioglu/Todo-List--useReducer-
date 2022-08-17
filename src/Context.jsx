@@ -31,7 +31,7 @@ const addTodo = (name) => {
 };
 
 const Provider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, [], () => {
+  const [state, dispatch] = useReducer(reducer,  () => {
     const savedTodos = localStorage.getItem("state");
 
     if (savedTodos) {
