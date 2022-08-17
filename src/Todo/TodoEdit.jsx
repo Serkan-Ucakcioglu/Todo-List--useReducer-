@@ -8,6 +8,15 @@ export default function TodoEdit({ todo }) {
   const { dispatch } = useContext(Context);
   const [titles, setTitles] = useState(todo.title);
   let todoContent;
+  const edit = (todo) => {
+    dispatch({
+      type: "edit-todo",
+      payload: {
+        id: todo.id,
+        title: titles,
+      },
+    })
+  }
 
   if (isEditing) {
     todoContent = (
@@ -18,19 +27,12 @@ export default function TodoEdit({ todo }) {
           disabled={!isEditing}
           onChange={(e) => {
             setTitles(e.target.value);
-            console.log(e.target.value);
           }}
         />
         <button
           className="edit"
           onClick={() => {
-            dispatch({
-              type: "edit-todo",
-              payload: {
-                id: todo.id,
-                title: titles,
-              },
-            }),
+            edit(todo)
               setIsEditing(!isEditing);
           }}
         >
